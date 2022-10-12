@@ -1,5 +1,6 @@
 <div class="action-container-wrapper">
     {#each $alerts as message}
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div
             bind:this={elements[message.id]}
             class={"action-bar " + MessageType[message.type]}

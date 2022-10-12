@@ -19,7 +19,8 @@ header
     padding 8px
     background $dark_app
     border-bottom 1px solid transparify(white, 8%)
-
+    position sticky
+    top 0
     color white
     .right
         display flex
