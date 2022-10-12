@@ -1,0 +1,21 @@
+{
+    "files.exclude": {
+        "**/.vscode": true,
+        "**/.devspace": true,
+    },
+    "eslint.format.enable": true,
+    "eslint.validate": [
+        "javascript",
+        "svelte"
+    ],
+    "svelte.enable-ts-plugin": true,
+    "[svelte]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/loft-sh/devspace/main/devspace-schema.json": "file:///Users/albert/repos/lumina/devspace.yaml"
+    }
+}
