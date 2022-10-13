@@ -5,7 +5,7 @@ import Logo from "$lib/display/Logo.svelte"
 <header>
     <Logo/>
     <div class="right">
-        <a href="/">About</a>
+        <a href="/about">About</a>
         <a href="/">All Zones</a>
     </div>
 </header>
