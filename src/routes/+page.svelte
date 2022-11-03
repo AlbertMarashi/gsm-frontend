@@ -8,12 +8,12 @@ let zones: Prop<Zone, "zone">[] = [
     {
         slug: "lumina",
         name: "Lumina",
-        type: ["Autonomous City", "Proposed Country"],
+        type: ["Proposed City", "Proposed Country", "Autonomy Movement"],
     },
     {
         slug: "city-of-telosa",
         name: "City of Telosa",
-        type: ["Autonomous City"],
+        type: ["Proposed City"],
     }
 ]
 
