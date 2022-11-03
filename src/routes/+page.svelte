@@ -25,7 +25,7 @@ let zones: Prop<Zone, "zone">[] = [
         <h1>
             <div class="icon"><Icon icon={Flag}/></div>
             <div class="text">
-                Autonomous Zones
+                Autonomous Zones Index
             </div>
         </h1>
         <div class="description">

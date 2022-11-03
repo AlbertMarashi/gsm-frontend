@@ -1,5 +1,4 @@
 
-
 ## Background
 Background text
 
@@ -7,11 +6,13 @@ Background text
 Unknown
 
 ## People and Society
-**Population**: 2120 registered digital citizens (2022 est.).
-**Language**: Luminar English - Official
+
+- **Population**: 2120 registered digital citizens (2022 est.).
+- **Language**: Luminar English - Official
 
 ## Government
 Operating a provisional government lead by founders of movement.
+
 Plans to establish a direct democratic platform to allow remote-citizens to participate in national decision making, creation of legislation and elections of government institutions.
 
 **Other information**
