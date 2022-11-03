@@ -1,20 +1,21 @@
 <script lang="ts">
+    import PageInfo from "$lib/components/PageInfo.svelte"
 import Zone from "$lib/components/Zone.svelte"
 import Icon from "$lib/display/Icon.svelte"
 import type { Prop } from "$lib/utils/typed_props"
 import Flag from "svelte-material-icons/FlagOutline.svelte"
 
 let zones: Prop<Zone, "zone">[] = [
-    {
-        slug: "lumina",
-        name: "Lumina",
-        type: ["Proposed City", "Proposed Country", "Autonomy Movement"],
-    },
-    {
-        slug: "city-of-telosa",
-        name: "City of Telosa",
-        type: ["Proposed City"],
-    }
+        {
+            slug: "lumina",
+            name: "Lumina",
+            type: ["Proposed City", "Proposed Country", "Autonomy Movement"],
+        },
+        {
+            slug: "city-of-telosa",
+            name: "City of Telosa",
+            type: ["Proposed City"],
+        }
 ]
 
 </script>
@@ -83,6 +84,9 @@ h1
         background transparify(black, 20%)
 </style>
 <svelte:head>
-    <title>Autonomous Zones</title>
-    <meta name="description" content="A global index of autonomous zones, new city projects, proposed countries and more." />
+    <PageInfo
+        title="Autonomous Zones"
+        include_suffix={false}
+        type="website"
+        description="A global index of autonomous zones, new city projects, proposed countries and more."/>
 </svelte:head>

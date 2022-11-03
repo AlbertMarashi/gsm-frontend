@@ -11,6 +11,7 @@ import Text from "svelte-material-icons/Text.svelte"
 import Translate from "svelte-material-icons/Translate.svelte"
 import AccountGroup from "svelte-material-icons/AccountGroup.svelte"
 import Tag from "$lib/display/Tag.svelte"
+import PageInfo from "$lib/components/PageInfo.svelte"
 
 export let data: PageData
 
@@ -124,6 +125,8 @@ h1
             opacity 0.7
 </style>
 <svelte:head>
-    <title>{ zone.name } - Autonomous Zones</title>
-    <meta name="description" content={zone.description} />
+    <PageInfo
+        title={zone.name}
+        type="article"
+        description={zone.description}/>
 </svelte:head>

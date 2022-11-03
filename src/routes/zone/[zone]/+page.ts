@@ -12,17 +12,14 @@ for (const [path, import_fn] of Object.entries(zone_imports)) {
     // zone looks like "./lumina/data.ts" or "./lumina/content.md"
     const zone_name = path.split("/")[1]
 
-
     zones[zone_name] = import_fn
 }
 
 export const load: PageLoad = async ({ params }) => {
-    console.log(zones)
-    const zone_slug = params.zone
+    const zone = zones[params.zone]
 
-    const zone = zones[zone_slug]
     if (!zone) {
-        throw error(404, `Zone ${zone_slug} not found`)
+        throw error(404, `Zone ${params.zone} not found`)
     }
 
     return {
