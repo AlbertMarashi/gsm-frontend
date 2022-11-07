@@ -17,9 +17,13 @@ export const graph_init = (auth_token: string | null, api_domain: string | null)
 
             const request = new Request(`${BACKENDAPI}/api/graph/`, {
                 method: "POST",
+                headers: {
+                    ...(auth_token ? {
+                        token: auth_token,
+                    } : {}),
+                },
                 body: JSON.stringify({
                     query,
-                    auth_token
                 }),
             })
 
