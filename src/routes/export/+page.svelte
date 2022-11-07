@@ -5,7 +5,7 @@ import type { PageData } from "./$types"
 export let data: PageData
 
 function exportCSV(){
-    (window as Window).location = `${data.api_domain}/api/csv`
+    (window as Window).location = `${data.api_domain}/api/csv?token=${data.graph.auth_token}`
 }
 
 </script>
