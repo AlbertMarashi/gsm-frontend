@@ -1,18 +1,15 @@
 <script lang="ts">
-    import { page } from "$app/stores"
-
-
+import { page } from "$app/stores"
 
 export let title: string
-export let include_suffix = true
 export let image: string | undefined = undefined
-export let site_name = "Autonomous Zones"
 export let description: string | undefined = undefined
 export let type: "website" | "article"
+export let site_name = "GSM Warranty"
 
 $: url = `https://${$page.url.host}${$page.url.pathname}${$page.url.search}`
 </script>
-<title>{ title }{ include_suffix ? ` - ${site_name}` : "" }</title>
+<title>{ title }</title>
 {#if description}
     <meta name="description" content={description}>
     <meta property="og:description" content={description}>

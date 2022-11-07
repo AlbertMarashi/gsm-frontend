@@ -11,8 +11,8 @@
             bind:value={value}
             name={autocomplete}
             id={name}
+            type="date"
             autocomplete={autocomplete}>
-        <label class="label" for={name}>{ name }</label>
     </div>
     {#if helper}
         <div
@@ -27,7 +27,8 @@
 import type { Field } from "$lib/utils/validator"
 
 export let name: string
-export let value: string
+export let value: string | null = null
+export let error: string | null = null
 export let v: Field | null = null
 export let helper: string | null = null
 export let autocomplete: string | null = null
@@ -73,40 +74,17 @@ function toggleFocus(val: boolean){
         border-radius 4px
         padding-left 12px
         padding-right 12px
-        padding-top 22px
-        padding-bottom 6px
+        padding-top 12px
+        padding-bottom 12px
         --webkit-appearance none
         appearance none
         &:-webkit-autofill ~ label
             font-size 13px
             top 6px
-    .label
-        font-size 16px
-        position absolute
-        font-weight 500
-        opacity: 0.75
-        top 15px
-        left 0
-        color $dark
-        padding-left 12px
-        transition top 0.1s ease, font-size 0.1s linear
-        cursor text
-    &.focus
-        .label
-            color $dark
-            font-size 13px
-            top 6px
-            padding-bottom 4px
-    &.hasContent
-        .label
-            font-size 13px
-            top: 6px
-
     &.error
         caret-color #dd3b3b
-        .label
+        input
             color #dd3b3b
-            opacity 1
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
