@@ -21,6 +21,7 @@ export const graph_init = (auth_token: string | null, api_domain: string | null)
                     ...(auth_token ? {
                         token: auth_token,
                     } : {}),
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     query,
