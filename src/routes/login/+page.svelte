@@ -23,7 +23,7 @@ async function submitRegistration(){
 
     set_cookie("token", loginUser)
 
-    await goto("/export")
+    await goto("/export?token=" + loginUser)
 
     data.alerts.create_alert(MessageType.Success, "You have succesfully authenticated")
 }
